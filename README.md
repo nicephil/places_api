@@ -1,5 +1,5 @@
 # places_api
-Query place addressed  
+Query place addresses  
 we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon </a> framework to implement the api
 
 ## how-to
