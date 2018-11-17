@@ -1,5 +1,5 @@
 # places_api
-Query place addresses  
+proxy to query google place api  
 we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon </a> framework to implement the api
 
 ## how-to
