@@ -1,6 +1,6 @@
 # places_api
-Query place addresses  
-we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon </a> framework to implement the api
+a proxy to query google places API
+we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon </a> framework to implement the proxy
 
 ## how-to
 - build/list/run image:
@@ -14,8 +14,11 @@ we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon
     docker attach places_api            # from host shell, attach
     ctrl-p ctrl-q                       # from inside docker, detach
 ```
-- run gunicorn to serve the api:
+- run gunicorn inside docker to serve the api:
 ```shell
     gunicorn --reload --bind 0.0.0.0:80 src.server:api
 ```
 gunicorn don't support ``src/server:api``, has to use ``src.server:api`` if the module is not in current directory
+
+## Note
+On deployment, must add google API key into ``src/places.py`` to make it work
