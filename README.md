@@ -13,6 +13,7 @@ we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon
 ```shell
     docker attach places_api            # from host shell, attach
     ctrl-p ctrl-q                       # from inside docker, detach
+    docker exec -it <running_container> bash # run bash inside container interactively
 ```
 - run gunicorn inside docker to serve the api:
 ```shell
