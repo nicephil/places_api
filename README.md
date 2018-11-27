@@ -19,7 +19,10 @@ we use <a href="https://falcon.readthedocs.io/en/stable/user/index.html"> falcon
 ```shell
     gunicorn --reload --bind 0.0.0.0:80 src.server:api
 ```
-gunicorn don't support ``src/server:api``, has to use ``src.server:api`` if the module is not in current directory
-
+gunicorn don't support ``src/server:api``, has to use ``src.server:api`` if the module is not in current directory  
+A more debug friendly gunicorn:
+```shell
+DEBUG=0 gunicorn --reload --bind 0.0.0.0:80 src.server:api --access-logfile /tmp/gunicorn.access.log --error-logfile /tmp/gunicorn.error.log
+```
 ## Note
 On deployment, must add google API key into ``src/places.py`` to make it work
