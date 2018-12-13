@@ -26,3 +26,8 @@ DEBUG=0 gunicorn --reload --bind 0.0.0.0:80 src.server:api --access-logfile /tmp
 ```
 ## Note
 On deployment, must add google API key into ``src/places.py`` to make it work
+
+## sample query
+```shell
+http 'tipark2.oakridge.io:8000/maps/api/geocode/json?address=7+cuibai+xihu+HangZhou&key=Oakridge'
+```
